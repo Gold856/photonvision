@@ -1,0 +1,47 @@
+# Spliced from https://github.com/wpilibsuite/frc-docs/blob/main/.github/workflows/update-rli-commands.yml
+name: "Run Inspector"
+description: "Runs Inspector for checking RLIs"
+
+runs:
+  using: "composite"
+  steps:
+    # ---- Common - Run ----
+    # Run Inspector
+    - name: Inspect RLIs
+      uses: docker://ghcr.io/starlight220/inspector:v1.9
+      id: inspector
+      with:
+        root: ${{ github.workspace }}
+      env:
+        INSPECTOR_CONFIG: ".github/workflows/inspector.json"
+
+    # ---- Common - Post Report ----
+    - name: Find Comment
+      uses: peter-evans/find-comment@v3
+      id: fc
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        comment-author: "github-actions[bot]"
+        body-includes: Inspector Report
+        direction: last
+
+    - name: Create comment
+      if: ${{ steps.fc.outputs.comment-id == 0 }}
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        body: ${{ env.REPORT }}
+        issue-number: ${{ github.event.issue.number }}
+
+    - name: Update comment
+      if: ${{ steps.fc.outputs.comment-id != 0 }}
+      uses: peter-evans/create-or-update-comment@v4
+      with:
+        body: |
+          ${{ env.REPORT }}
+        comment-id: ${{ steps.fc.outputs.comment-id }}
+        edit-mode: replace
+
+    # If there are any outdated or invalid RLIs, fail the status check
+    - name: Set exit code
+      if: ${{ steps.inspector.outputs.up-to-date == false }}
+      run: exit 1

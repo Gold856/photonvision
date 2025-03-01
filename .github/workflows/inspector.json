@@ -1,0 +1,10 @@
+{
+    "sources": [
+        {
+            "baseUrl": "https://raw.githubusercontent.com/PhotonVision/photonvision/",
+            "version": "v\\d{4}\\.\\d\\.\\d(?:-(?:alpha|beta|rc)-\\d)?|[0-9a-f]{40}",
+            "latestVersion": "v2025.1.1"
+        }
+    ],
+    "ignoredFiles": []
+}

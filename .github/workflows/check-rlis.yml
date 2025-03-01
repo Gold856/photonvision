@@ -1,0 +1,22 @@
+# Spliced from https://github.com/wpilibsuite/frc-docs/blob/main/.github/workflows/update-rli-commands.yml
+# and https://github.com/wpilibsuite/allwpilib/pull/3672
+name: Check RLIs
+on: [pull_request_target]
+
+jobs:
+  check-rlis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Replace with current version
+      - name: Use PR version
+        run: |
+          # Filter source entries, setting the latest version
+          cat '.github/workflows/inspector.json' \
+            | jq '.sources |= map(select (.baseUrl | test("PhotonVision/photonvision")) | .latestVersion |= "${{ github.event.pull_request.head.sha }}")' \
+            | tee '.github/workflows/inspector.json'
+
+      - name: Check RLIs
+        uses: ./.github/actions/check-rli

@@ -1,0 +1,32 @@
+name: Update RLIs - Comment Commands
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  check-rli:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '\inspector')
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Replace with current version
+      - name: Use PR version
+        run: |
+          # Filter source entries, setting the latest version
+          cat '.github/workflows/inspector.json' \
+            | jq '.sources |= map(select (.baseUrl | test("PhotonVision/photonvision")) | .latestVersion |= "${{ github.event.pull_request.head.sha }}")' \
+            | tee '.github/workflows/inspector.json'
+
+      - name: Check RLIs
+        uses: ./.github/actions/check-rli
+      # If autofix is triggered, commit changes
+      - name: Commit
+        run: |
+          # Set credentials
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          # Commit
+          git commit -m "Autofix RLIs"
+          git push
