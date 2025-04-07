@@ -323,18 +323,8 @@ public class DataSocketHandler {
             throws JsonProcessingException {
         ByteBuffer b = ByteBuffer.wrap(objectMapper.writeValueAsBytes(message));
 
-        if (userToSkip == null) {
             for (WsContext user : users) {
                 sendMessage(b, user);
             }
-        } else {
-            var skipUserPort = ((InetSocketAddress) userToSkip.session.getRemoteAddress()).getPort();
-            for (WsContext user : users) {
-                var userPort = ((InetSocketAddress) user.session.getRemoteAddress()).getPort();
-                if (userPort != skipUserPort) {
-                    sendMessage(b, user);
-                }
-            }
-        }
     }
 }
