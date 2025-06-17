@@ -62,8 +62,8 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
-      - name: Install RoboRIO Toolchain
-        run: ./gradlew installRoboRioToolchain
+      - name: Install SystemCore Toolchain
+        run: ./gradlew installSystemCoreToolchain
       # Need to publish to maven local first, so that C++ sim can pick it up
       - name: Publish photonlib to maven local
         run: ./gradlew photon-targeting:publishtomavenlocal photon-lib:publishtomavenlocal -x check
