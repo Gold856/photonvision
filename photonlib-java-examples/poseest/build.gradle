@@ -8,11 +8,6 @@ targetCompatibility = JavaVersion.VERSION_17
 
 def ROBOT_MAIN_CLASS = "frc.robot.Main"
 
-wpi.maven.useDevelopment = true
-wpi.versions.wpilibVersion = "2025.3.2"
-wpi.versions.wpimathVersion = "2025.3.2"
-
-
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project DeployUtils.
 deploy {
