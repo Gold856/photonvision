@@ -26,7 +26,7 @@ We use the 2024 game's AprilTag Locations:
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
          :language: java
          :lines: 68-68
          :linenos:
@@ -61,7 +61,7 @@ To incorporate PhotonVision, we need to create a {code}`PhotonCamera`:
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
          :language: java
          :lines: 57-57
          :linenos:
@@ -69,7 +69,7 @@ To incorporate PhotonVision, we need to create a {code}`PhotonCamera`:
 
     .. tab-item:: C++
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-cpp-examples/poseest/src/main/include/Vision.h
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-cpp-examples/poseest/src/main/include/Vision.h
          :language: c++
          :lines: 145-145
          :linenos:
@@ -92,7 +92,7 @@ During periodic execution, we read back camera results. If we see AprilTags in t
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/poseest/src/main/java/frc/robot/Robot.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/poseest/src/main/java/frc/robot/Robot.java
          :language: java
          :lines: 64-74
          :linenos:
@@ -100,7 +100,7 @@ During periodic execution, we read back camera results. If we see AprilTags in t
 
     .. tab-item:: C++
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-cpp-examples/poseest/src/main/cpp/Robot.cpp
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-cpp-examples/poseest/src/main/cpp/Robot.cpp
          :language: c++
          :lines: 38-46
          :linenos:
@@ -126,7 +126,7 @@ First, we create a new {code}`VisionSystemSim` to represent our camera and copro
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
          :language: java
          :lines: 65-69
          :linenos:
@@ -134,7 +134,7 @@ First, we create a new {code}`VisionSystemSim` to represent our camera and copro
 
     .. tab-item:: C++
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-cpp-examples/poseest/src/main/include/Vision.h
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-cpp-examples/poseest/src/main/include/Vision.h
          :language: c++
          :lines: 49-52
          :linenos:
@@ -154,7 +154,7 @@ Then, we add configure the simulated vision system to match the camera system be
     .. tab-item:: Java
        :sync: java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/poseest/src/main/java/frc/robot/Vision.java
          :language: java
          :lines: 69-82
          :linenos:
@@ -162,7 +162,7 @@ Then, we add configure the simulated vision system to match the camera system be
 
     .. tab-item:: C++
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-cpp-examples/poseest/src/main/include/Vision.h
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-cpp-examples/poseest/src/main/include/Vision.h
          :language: c++
          :lines: 53-65
          :linenos:

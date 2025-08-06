@@ -17,7 +17,7 @@ To do this, we'll use the _pitch_ of the target in the camera image and trigonom
 
     .. tab-item:: Java
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-java-examples/aimandrange/src/main/java/frc/robot/Robot.java
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-java-examples/aimandrange/src/main/java/frc/robot/Robot.java
          :language: java
          :lines: 84-131
          :linenos:
@@ -25,7 +25,7 @@ To do this, we'll use the _pitch_ of the target in the camera image and trigonom
 
     .. tab-item:: C++ (Header)
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-cpp-examples/aimandrange/src/main/include/Robot.h
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-cpp-examples/aimandrange/src/main/include/Robot.h
          :language: c++
          :lines: 25-63
          :linenos:
@@ -41,7 +41,7 @@ To do this, we'll use the _pitch_ of the target in the camera image and trigonom
 
     .. tab-item:: Python
 
-       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/abe95dfaa055bbe3609f72cfcaaba0f96ee7978c/photonlib-python-examples/aimandrange/robot.py
+       .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/v2025.3.1/photonlib-python-examples/aimandrange/robot.py
          :language: python
          :lines: 52-91
          :linenos:
