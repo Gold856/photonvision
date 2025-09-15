@@ -16,7 +16,7 @@ The `PhotonCamera` class has two constructors: one that takes a `NetworkTable` a
         :language: java
         :lines: 51-52
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/include/Robot.h
         :language: c++
         :lines: 42-43
 
@@ -47,7 +47,7 @@ Use the `getLatestResult()`/`GetLatestResult()` (Java and C++ respectively) to o
         :language: java
         :lines: 79-80
 
-     .. rli:: https://github.com/PhotonVision/photonvision/raw/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
+     .. rli:: https://raw.githubusercontent.com/PhotonVision/photonvision/a3bcd3ac4f88acd4665371abc3073bdbe5effea8/photonlib-cpp-examples/src/main/cpp/examples/aimattarget/cpp/Robot.cpp
          :language: c++
          :lines: 35-36
 
