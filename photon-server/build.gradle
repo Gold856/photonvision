@@ -34,6 +34,15 @@ shadowJar {
     configurations = [
         project.configurations.runtimeClasspath
     ]
+    // SQLite natives that we don't use
+    exclude '**/x86/**'
+    exclude '**/ppc64/**'
+    exclude '**/arm/**'
+    exclude '**/armv6/**'
+    exclude '**/armv7/**'
+    exclude '**/Linux-Android/**'
+    exclude '**/Linux-Musl/**'
+    exclude '**/FreeBSD/**'
 }
 
 node {
