@@ -5,7 +5,13 @@ permissions:
 
 on:
   push:
+    paths:
+      - 'photon-lib/py/**'
+      - 'photonlib-python-examples/**'
   pull_request:
+    paths:
+      - 'photon-lib/py/**'
+      - 'photonlib-python-examples/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
