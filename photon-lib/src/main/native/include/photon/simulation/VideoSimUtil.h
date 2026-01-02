@@ -24,7 +24,6 @@
 
 #pragma once
 
-#include <algorithm>
 #include <numeric>
 #include <string>
 #include <unordered_map>

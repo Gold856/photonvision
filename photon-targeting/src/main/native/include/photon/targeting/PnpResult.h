@@ -21,7 +21,6 @@
 
 #include <frc/geometry/Transform3d.h>
 
-#include "photon/dataflow/structures/Packet.h"
 #include "photon/struct/PnpResultStruct.h"
 
 namespace photon {

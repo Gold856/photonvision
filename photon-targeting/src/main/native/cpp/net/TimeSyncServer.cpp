@@ -17,14 +17,9 @@
 
 #include "net/TimeSyncServer.h"
 
-#include <atomic>
-#include <chrono>
 #include <cstdlib>
 #include <cstring>
 #include <ctime>
-#include <iostream>
-#include <mutex>
-#include <thread>
 
 #include <wpi/Logger.h>
 #include <wpi/print.h>

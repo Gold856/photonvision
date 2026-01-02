@@ -17,7 +17,6 @@
 
 #include "photon/estimation/VisionEstimation.h"
 
-#include <iostream>
 #include <utility>
 #include <vector>
 

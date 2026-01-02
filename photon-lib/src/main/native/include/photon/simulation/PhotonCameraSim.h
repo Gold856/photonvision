@@ -24,14 +24,10 @@
 
 #pragma once
 
-#include <algorithm>
 #include <limits>
-#include <string>
-#include <utility>
 #include <vector>
 
 #include <cameraserver/CameraServer.h>
-#include <frc/Timer.h>
 #include <frc/apriltag/AprilTagFieldLayout.h>
 #include <frc/apriltag/AprilTagFields.h>
 #include <photon/PhotonCamera.h>
