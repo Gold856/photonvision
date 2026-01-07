@@ -123,7 +123,7 @@ jobs:
           pnpm install
           pnpm test-setup
       - name: Prebuild Gradle
-        run: ./gradlew photon-targeting:build photon-core:build photon-server:build -x check
+        run: ./gradlew photon-server:build -x check
       - name: Run Playwright tests
         working-directory: photon-client
         run: pnpm test
@@ -159,7 +159,7 @@ jobs:
         with:
           node-version: 22
       - name: Gradle Build
-        run: ./gradlew photon-targeting:build photon-core:build photon-server:build -x check
+        run: ./gradlew photon-server:build -x check
       - name: Gradle Tests and Coverage
         run: ./gradlew test jacocoTestReport --stacktrace
   build-offline-docs:
@@ -249,7 +249,7 @@ jobs:
           distribution: temurin
           architecture: ${{ matrix.architecture }}
       - run: git fetch --tags --force
-      - run: ./gradlew photon-targeting:build photon-lib:build
+      - run: ./gradlew photon-lib:build
         name: Build with Gradle
       - run: ./gradlew photon-lib:publish photon-targeting:publish
         name: Publish
@@ -291,7 +291,7 @@ jobs:
           git config --global --add safe.directory /__w/photonvision/photonvision
       - name: Build PhotonLib
         # We don't need to run tests, since we specify only non-native platforms
-        run: ./gradlew photon-targeting:build photon-lib:build ${{ matrix.build-options }} -x test
+        run: ./gradlew photon-lib:build ${{ matrix.build-options }} -x test
       - name: Publish
         run: ./gradlew photon-lib:publish photon-targeting:publish ${{ matrix.build-options }}
         env:
