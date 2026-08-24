@@ -62,7 +62,6 @@ public class Server {
                         javalinConfig -> {
                             javalinConfig.showJavalinBanner = false;
                             javalinConfig.staticFiles.add("web");
-                            javalinConfig.spaRoot.addFile("/", "web/index.html");
                             javalinConfig.registerPlugin(new CorsPlugin(cors -> cors.addRule(CorsRule::anyHost)));
                             javalinConfig.requestLogger.http(
                                     (ctx, ms) -> {
