@@ -362,6 +362,8 @@ jobs:
         run: |
           sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-14 200
           sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-14 200
+          gcc -Q --help=target
+          gcc -v
       - uses: actions/download-artifact@v8
         with:
           name: built-docs
